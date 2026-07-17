@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlavorFeet | Register</title>
+
+    <link rel="stylesheet" href="register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+/*==================================================
+                GOOGLE FONTS
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+
+/*==================================================
+                    RESET
+==================================================*/
+
+
+
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: url("images/register-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height:100vh;
+overflow-y:auto;
+overflow-x:hidden;
+margin:0;
+    overflow:hidden;
+
+    position:relative;
+}
+
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    z-index:-1;
+}
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    z-index:999;
+
+}
+
+
+
+/*==================================================
+                    LOGO
+==================================================*/
+
+.logo{
+
+    font-size:50px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+
+
+.flavor{
+
+    color:#FF6B35;
+
+    font-weight:800;
+        font-style:italic;
+    
+
+}
+
+.feet{
+
+    color:#C1121F;
+
+
+}
+
+
+
+/*==================================================
+                    NAVBAR
+==================================================*/
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#ff6b35;
+
+}
+
+
+
+.login-btn-nav{
+    padding:9px 22px;
+
+    background:linear-gradient(135deg,#ff7b32,#ff4b2b);
+
+    color:#ffffff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+    box-shadow:0 10px 25px rgba(255,107,53,.35);
+
+}
+
+.login-btn-nav:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(255,107,53,.45);
+
+}
+
+
+
+/*==================================================
+                MAIN CONTAINER
+==================================================*/
+
+
+/*==================================================
+                HERO CONTENT
+==================================================*/
+
+.hero-content{
+
+    width:50%;
+
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:54px;
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content span{
+
+    color:#ff6b35;
+
+    font-style:italic;
+
+}
+
+.hero-content p{
+
+
+    color:#f2f2f2;
+
+    line-height:1.8;
+
+font-size:18px;
+
+    margin-bottom:22px;
+
+}
+
+
+
+/*==================================================
+                FEATURE CARDS
+==================================================*/
+
+.feature-cards{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.feature{
+
+    width:145px;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.feature i{
+
+    font-size:28px;
+
+    color:#ff6b35;
+
+    margin-bottom:15px;
+
+}
+
+.feature h3{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.feature p{
+
+    color:#e9e9e9;
+
+    font-size:14px;
+
+    margin:0;
+
+}
+/*==================================================
+            REGISTER CARD
+==================================================*/
+
+.register-card{
+    width:500px;
+    max-width:92%;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    padding:18px 25px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.35);
+}
+.register-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.25);
+
+}
+
+
+/*==================================================
+                CARD LOGO
+==================================================*/
+
+.card-logo{
+
+    width:55px;
+
+    height:55px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#ff7b32,#ff4b2b);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+    box-shadow:0 12px 30px rgba(255,107,53,.35);
+
+}
+
+.register-card h2{
+
+    text-align:center;
+
+    font-family:'Playfair Display',serif;
+
+
+    color:#222;
+
+  font-size:30px;
+
+    margin-bottom:3px;
+ 
+
+}
+
+.card-subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+
+ font-size:15px;
+
+    margin-bottom:15px;
+
+    line-height:1.6;
+
+
+}
+
+
+
+/*==================================================
+            ROLE SECTION
+==================================================*/
+
+.role-title{
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+    color:#444;
+
+}
+
+.role-container{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:10px;
+
+}
+
+.role-card{
+
+    flex:1;
+
+    background:white;
+
+    border:2px solid #ececec;
+
+    border-radius:18px;
+
+    padding:14px 10px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.role-card i{
+
+    display:block;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    color:#777;
+
+}
+
+.role-card span{
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.role-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#ff6b35;
+
+}
+
+
+
+
+
+/*==================================================
+            INPUT FIELDS
+==================================================*/
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:12px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:46px;
+
+    border:2px solid #ededed;
+
+    border-radius:16px;
+
+        padding:0 55px;
+    
+
+    font-size:15px;
+
+    outline:none;
+
+    background:#fafafa;
+
+    transition:.35s;
+
+}
+
+.input-box input:focus{
+
+    border-color:#ff6b35;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(255,107,53,.12);
+
+}
+
+.input-box i:first-child{
+
+    position:absolute;
+
+    left:15px;
+
+    top:12px;
+
+    color:#999;
+
+    font-size:18px;
+
+}
+
+
+
+/*==================================================
+            PASSWORD ICON
+==================================================*/
+
+#togglePassword{
+
+    position:absolute;
+
+    right:18px;
+
+    top:12px;
+
+    color:#888;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#togglePassword:hover{
+
+    color:#ff6b35;
+
+}
+
+
+
+/*==================================================
+            REGISTER BUTTON
+==================================================*/
+
+.register-btn{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:18	px;
+
+    background:linear-gradient(135deg,#ff7b32,#ff4b2b);
+
+    color:white;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    margin-top:2px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(255,107,53,.35);
+
+}
+
+.register-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 22px 45px rgba(255,107,53,.45);
+
+}
+
+.register-btn i{
+
+    margin-left:10px;
+
+}
+
+
+
+/*==================================================
+            LOGIN LINK
+==================================================*/
+
+.bottom-link{
+
+    text-align:center;
+
+    margin-top:8px;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+.bottom-link a{
+
+    color:#ff6b35;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+.bottom-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+
+/*==================================================
+            RIPPLE EFFECT
+==================================================*/
+
+.register-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.40);
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/*==================================================
+            FADE ANIMATION
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.register-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .container{
+
+        justify-content:center;
+
+    }
+
+    .hero-content{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    header{
+
+        padding:20px;
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:15px;
+
+    }
+
+    nav{
+
+        gap:20px;
+
+    }
+
+    .register-card{
+
+        width:100%;
+
+        max-width:430px;
+
+        padding:28px;
+
+    }
+
+    .role-container{
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================
+        BENEFITS SECTION
+==============================*/
+
+.benefits{
+
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.benefit{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+}
+
+.benefit i{
+
+    width:55px;
+
+    height:55px;
+
+    background:rgba(255,107,53,.15);
+
+    border:2px solid rgba(255,107,53,.25);
+
+    color:#ff6b35;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.benefit-content h3{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+.benefit-content p{
+
+    color:#dcdcdc;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    width:100%;
+    height:calc(100vh - 80px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:80px;          /* Below navbar */
+    padding:20px 100px 20px 60px;
+}
+hero-content{
+
+    width:55%;
+    color:white;
+
+
+
+
+    position:relative;
+
+    z-index:100;
+
+}
+
+
+.hero-content h1{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:65px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    color:white;
+
+
+    letter-spacing:-1px;
+
+}
+
+.hero-content span{
+
+    color:#ff6b35;
+
+    font-style:italic;
+
+}
+
+.hero-content p{
+
+    font-family:'DM Serif Display', serif;
+
+    font-size:25px;
+
+    font-weight:400;
+
+    line-height:1.8;
+
+    color:#f1f1f1;
+
+    margin-top:25px;
+
+}
+.feature-cards{
+
+    display:flex;
+
+    gap:22px;
+
+    margin-top:35px;
+
+}
+
+.feature{
+
+    width:210px;
+
+    padding:22px;
+
+background:rgba(255,255,255,.12);
+
+    color:white;
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.feature i{
+
+    color:#ff6b35;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.feature h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.feature p{
+
+    color:#ddd;
+
+    font-size:15px;
+
+    margin:0;
+
+}
+
+
+.logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<!--================ HEADER =================-->
+
+<header>
+
+    <div class="logo">
+
+        <span class="flavor">Flavor</span><span class="feet">Feet</span>
+
+    </div>
+
+    <nav>
+
+       
+
+        <a href="login.html" class="login-btn-nav">
+           🔐 Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!--================ MAIN =================-->
+
+<section class="container">
+
+
+    <!--================ LEFT SIDE =================-->
+
+    <div class="hero-content">
+
+    <h1>
+        Great Food
+        <span>Delivered</span>
+        To Your Doorstep
+    </h1>
+
+    <p>
+        Order from 500+ restaurants and enjoy
+        delicious meals delivered fast to your doorstep.
+    </p>
+
+    <div class="feature-cards">
+
+        <div class="feature">
+            <i class="fas fa-utensils"></i>
+            <h3>Wide Range</h3>
+            <p>500+ Restaurants</p>
+        </div>
+
+        <div class="feature">
+            <i class="fas fa-motorcycle"></i>
+            <h3>Fast Delivery</h3>
+            <p>30 Minutes</p>
+        </div>
+
+        <div class="feature">
+            <i class="fas fa-award"></i>
+            <h3>Best Quality</h3>
+            <p>Fresh & Hygienic Food</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+    
+
+
+
+    <!--================ REGISTER CARD =================-->
+
+    <div class="register-card">
+
+        <div class="card-logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+        </div>
+
+        <h2>Create Account</h2>
+
+        <p class="card-subtitle">
+
+            Join FlavorFeet and start enjoying delicious food delivered to your doorstep.
+
+        </p>
+
+
+        <form action="callRegisterServlet" method="post">
+
+
+           <input type="hidden"
+       id="selectedRole"
+       name="role"
+       value="">
+
+
+            <label class="role-title">
+
+                Select User Type
+
+            </label>
+
+
+            <div class="role-container">
+
+                <div class="role-card" data-role="Customer">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Customer</span>
+
+                </div>
+
+                <div class="role-card"
+
+                     data-role="Restaurant">
+
+                    <i class="fa-solid fa-store"></i>
+
+                    <span>Restaurant</span>
+
+                </div>
+
+                <div class="role-card"
+
+                     data-role="Admin">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <span>Admin</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input type="text"
+
+                       name="userName"
+
+                       placeholder="Enter Username"
+
+                       required>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input type="email"
+
+                       name="email"
+
+                       placeholder="Enter Email Address"
+
+                       required>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input type="password"
+
+                       id="password"
+
+                       name="password"
+
+                       placeholder="Create Password"
+
+                       required>
+
+                <i class="fa-solid fa-eye"
+
+                   id="togglePassword"></i>
+
+            </div>
+
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <input type="text"
+
+                       name="adress"
+
+                       placeholder="Enter Address"
+
+                       required>
+
+            </div>
+
+
+            <button type="submit"
+
+                    class="register-btn">
+
+                Create Account
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <div class="bottom-link">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<script src="register.js"></script>
+
+</body>
+
+</html>

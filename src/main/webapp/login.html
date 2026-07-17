@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<jsp:include page="publicNavbar.jsp"/>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FlavorFeet | Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="login.css">
+<style>
+
+/* ================================
+        GOOGLE FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================================
+        RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.18)),
+        url("images/login/login-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+/* ================================
+        BACKGROUND
+================================ */
+
+.background-shapes{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-2;
+
+}
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:.35;
+
+}
+
+.circle.one{
+
+    width:350px;
+
+    height:350px;
+
+    background:#ff6b35;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.circle.two{
+
+    width:320px;
+
+    height:320px;
+
+    background:#ffb347;
+
+    bottom:-100px;
+
+    right:-100px;
+
+}
+
+/* ================================
+        HEADER
+================================ */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:77px;
+
+    padding:0 70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    z-index:9999;
+
+}
+
+.logo{
+
+font-size:48px;
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.flavor{
+
+    color:#FF6B35;
+
+    font-weight:800;
+            font-style:italic;
+    
+
+}
+
+.feet{
+
+    color:#C1121F;
+    font-weight:800;
+
+}
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+    font-family: 'Playfair Display', serif;
+
+}
+
+nav a:hover{
+
+    color:#ff6b35;
+
+}
+
+nav a.active{
+
+    color:#ff6b35;
+
+}
+
+/* ================================
+        MAIN CONTAINER
+================================ */
+	
+.container{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-top:40px;
+
+} 
+
+/* ==========================================
+            LOGIN CARD
+========================================== */
+
+.login-card{
+    width:580px;
+    min-height:420px;
+
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.4);
+
+    padding:45px 45px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.20);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.login-card h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+    text-align:center;
+
+    color:#222;
+    margin-bottom:5px;
+
+
+
+}
+
+.login-card p{
+    font-size:19px;
+    margin-bottom:32px;
+    line-height:1.7;
+}
+.login-card p{
+
+    text-align:center;
+
+    color:#6b7280;
+font-family: 'Montserrat', sans-serif;
+    line-height:1.7;
+    font-weight:550;
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ==========================================
+            INPUT BOX
+========================================== */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:70px;
+
+    border:2px solid #eeeeee;
+
+    border-radius:50px;
+
+    padding-left:60px;
+
+    padding-right:50px;
+
+    font-size:18px;
+
+    outline:none;
+
+    transition:.35s;
+
+    background:#fcfcfc;
+
+}
+
+.input-box input:focus{
+
+    border-color:#ff6b35;
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(255,107,53,.10);
+
+}
+
+.input-box i:first-child{
+
+    position:absolute;
+
+    left:24px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#999;
+
+    font-size:20px;
+
+}
+
+#togglePassword{
+
+    position:absolute;
+
+    right:24px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#999;
+
+    transition:.3s;
+
+}
+
+#togglePassword:hover{
+
+    color:#ff6b35;
+
+}
+
+
+/* ==========================================
+        REMEMBER / FORGOT
+========================================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+  margin:10px 0 28px;
+    font-size:16px;
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#666;
+
+}
+
+.options input{
+
+    accent-color:#ff6b35;
+
+}
+
+.options a{
+
+    color:#ff6b35;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================
+            LOGIN BUTTON
+========================================== */
+
+.login-btn{
+
+    width:100%;
+
+
+    border:none;
+
+    border-radius:60px;
+
+    background:linear-gradient(135deg,#ff7b32,#ff4b2b);
+
+    color:white;
+
+height:58px;
+font-size:22px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 18px 40px rgba(255,107,53,.35);
+
+}
+
+.login-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(255,107,53,.45);
+
+}
+
+.login-btn:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================
+            DIVIDER
+========================================== */
+
+.divider{
+
+    text-align:center;
+
+    margin:22px 0;
+
+    position:relative;
+
+}
+
+.divider::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#ddd;
+    
+        margin:18px 0;
+    
+
+}
+
+.divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    width:42%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider span{
+
+    background:white;
+
+    padding:0 15px;
+
+    color:#999;
+
+}
+
+
+/* ==========================================
+            SOCIAL LOGIN
+========================================== */
+
+.social-title{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:20px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.social-icons a{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f8f8f8;
+
+    color:#444;
+
+    font-size:20px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+.social-icons a:hover{
+
+    background:#ff6b35;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ==========================================
+            REGISTER
+========================================== */
+
+.register-link{
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+.register-link a{
+
+    color:#ff6b35;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.register-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================
+        FLOATING FOOD IMAGES
+========================================== */
+
+.food{
+    position:absolute;
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 18px 45px rgba(0,0,0,.20);
+    
+    transition:.4s;
+}
+
+.food:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+.food1{
+    top:140px;
+    left:110px;
+}
+
+.food2{
+    top:360px;
+    left:60px;
+}
+
+.food3{
+    bottom:90px;
+    left:120px;
+}
+
+.food4{
+    top:150px;
+    right:110px;
+}
+
+.food5{
+    top:390px;
+    right:60px;
+}
+
+.food6{
+    bottom:80px;
+    right:120px;
+}
+
+
+
+.food1{ transform:rotate(-10deg); }
+.food2{ transform:rotate(8deg); }
+.food3{ transform:rotate(-8deg); }
+.food4{ transform:rotate(10deg); }
+.food5{ transform:rotate(-7deg); }
+.food6{ transform:rotate(7deg); }
+/* ==========================================
+            FLOAT ANIMATION
+========================================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/* ==========================================
+            LOGIN CARD ANIMATION
+========================================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+footer{
+
+height:40px;
+
+    padding:10px 0;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-top:0;
+    
+
+}
+
+footer a{
+
+    text-decoration:none;
+
+    color:#777;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#ff6b35;
+
+}
+
+
+/* ==========================================
+            HOVER EFFECTS
+========================================== */
+
+.login-card:hover{
+
+    transform:translateY(-6px);
+
+    transition:.4s;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.logo{
+
+    transition:.4s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+.logo:hover .flavor{
+
+    color:#ff884d;
+
+}
+
+.logo:hover .feet{
+
+    color:#ff6b35;
+
+}
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.food{
+
+display:none;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+nav{
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.container{
+
+padding:25px;
+
+}
+
+.login-card{
+
+width:100%;
+    margin-top:60px;
+
+
+padding:35px 25px;
+
+}
+
+.login-card h1{
+
+font-size:34px;
+
+}
+
+footer{
+
+flex-wrap:wrap;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+}
+
+
+@media(max-width:480px){
+
+.logo{
+
+font-size:30px;
+
+}
+
+.login-card{
+
+padding:28px 20px;
+
+border-radius:22px;
+
+}
+
+.login-card h1{
+
+font-size:30px;
+
+}
+
+.login-card p{
+
+font-size:14px;
+
+}
+
+.input-box input{
+
+height:52px;
+
+font-size:15px;
+
+}
+
+.login-btn{
+
+height:52px;
+
+font-size:16px;
+
+}
+
+.social-icons a{
+
+width:45px;
+
+height:45px;
+
+font-size:18px;
+
+}
+
+}
+
+
+
+.login-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+background:rgba(255,255,255,.4);
+
+border-radius:50%;
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+#togglePassword{
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    z-index:1000;
+
+    color:#777;
+
+}
+
+
+
+
+.container{
+    width:100%;
+    height:calc(100vh - 77px);
+    margin-top:77px;
+
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+
+    padding:0 80px;
+}
+
+
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+    padding:0 80px;
+}
+
+.hero-content{
+    width:45%;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.hero-content h1 span{
+    color:#ff6b35;
+}
+
+.hero-content p{
+    font-size:20px;
+    line-height:1.8;
+    color:#f3f3f3;
+    margin-bottom:35px;
+}
+
+.feature-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.feature-list div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:19px;
+    font-weight:600;
+}
+
+.feature-list i{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ff6b35;
+    font-size:20px;
+}
+.logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.nav-buttons button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f2f2f2;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.nav-buttons button:hover{
+
+    background:#FF6B35;
+
+    color:white;
+
+}
+
+
+/* Signup */
+
+
+
+.signup-btn{
+
+    padding:9px 22px;
+
+    background:linear-gradient(135deg,#ff7b32,#ff4b2b);
+
+    color:#ffffff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+    box-shadow:0 10px 25px rgba(255,107,53,.35);
+
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(255,107,53,.45);
+
+}
+
+
+
+.login-info{
+    margin:20px 0;
+    padding:15px;
+    border-radius:12px;
+    background:#fff5ef;
+    color:#ff6b35;
+    text-align:center;
+    font-weight:600;
+    border:1px solid #ffe2d3;
+}
+
+.login-info i{
+    margin-right:8px;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<div class="background-shapes">
+
+<div class="circle one"></div>
+<div class="circle two"></div>
+
+</div>
+
+
+<!--================ HEADER ================-->
+
+<header>
+
+<div class="logo">
+
+<span class="flavor">Flavor</span><span class="feet">Feet</span>
+
+</div>
+
+<nav>
+
+
+
+<div class="nav-buttons">
+
+
+<a href="register.html" class="signup-btn">
+        <i class="fa-solid fa-user-plus"></i> Sign Up
+    </a>
+
+        </div>
+
+</nav>
+
+</header>
+
+
+
+<!--================ DECORATION ================-->
+
+<!-- -- --<img src="images/login/pizza.png" class="food food1">
+
+<img src="images/login/burger.png" class="food food2">
+
+<img src="images/login/biryani.png" class="food food3">
+
+<img src="images/login/fries.png" class="food food4">
+
+<img src="images/login/noodles.png" class="food food5">
+
+<img src="images/login/shake.png" class="food food6">-----!>
+
+
+
+<!--================ LOGIN CARD ================-->
+
+<div class="container">
+
+
+
+
+
+ <div class="hero-content">
+
+         <h1>
+            Every Meal,
+            <span>A Happy Experience</span>
+        </h1>
+
+       
+
+       
+        <div class="feature-list">
+            <div><i class="fa-solid fa-burger"></i> 500+ Delicious Dishes</div>
+            <div><i class="fa-solid fa-truck-fast"></i> Fast & Reliable Delivery</div>
+            <div><i class="fa-solid fa-star"></i> Top Rated Restaurants</div>
+            <div><i class="fa-solid fa-credit-card"></i> Secure & Easy Payments</div>
+        </div>
+
+    </div>
+
+
+
+
+<div class="login-card">
+
+<h1>
+
+Welcome Back
+
+</h1>
+
+<p>
+
+Sign in to continue your delicious journey with FlavorFeet.
+
+</p>
+
+
+
+    <form action="callLoginServlet" method="post">
+
+
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+
+type="text"
+
+name="userName"
+
+placeholder="Enter Username"
+
+required>
+
+</div>
+
+
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+
+type="password"
+
+id="password"
+
+name="password"
+
+placeholder="Enter Password"
+
+required>
+
+<i
+
+class="fa-solid fa-eye"
+
+id="togglePassword">
+
+</i>
+
+</div>
+
+
+
+<div class="options">
+
+<label>
+
+<input type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="#">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+
+
+<button
+
+class="login-btn"
+
+type="submit">
+
+Login
+
+</button>
+
+
+
+
+
+
+
+
+
+<div class="register-link">
+
+Don't have an account?
+
+<a href="register.html">
+
+Create Account
+
+</a>
+
+</div>
+
+
+
+</form>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<script src="login.js"></script>
+</body>
+</html>

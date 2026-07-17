@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* Entire Website */
+
+body.dark-mode{
+    background:#121212;
+    color:#f5f5f5;
+    transition:.3s;
+}
+
+/* Navbar */
+
+body.dark-mode .navbar{
+    background:#1e1e1e;
+}
+
+/* Cards */
+
+body.dark-mode .restaurant-card,
+body.dark-mode .menu-card,
+body.dark-mode .card{
+    background:#242424;
+    color:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+/* Buttons */
+
+body.dark-mode .btn{
+    background:#ff6b35;
+    color:white;
+}
+
+/* Footer */
+
+body.dark-mode footer{
+    background:#1b1b1b;
+    color:white;
+}
+
+/* Input */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select{
+
+    background:#2d2d2d;
+    color:white;
+    border:1px solid #555;
+}
+
+/* Table */
+
+body.dark-mode table{
+    background:#242424;
+    color:white;
+}
+
+body.dark-mode th{
+    background:#333;
+}

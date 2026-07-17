@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.header{
+    background:white;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header h1{
+    color:#fc8019;
+}
+
+.menu-container{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.menu-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.menu-name{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.description{
+    color:gray;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:green;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.add-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#fc8019;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.add-btn:hover{
+    background:#e56f00;
+}
+</style>
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="header">
+    <h1>🍽 Restaurant Menu</h1>
+</div>
+
+<div class="menu-container">
+
+    <div class="menu-card">
+        <img src="images/pizza.jpg">
+        <div class="card-content">
+            <div class="menu-name">Margherita Pizza</div>
+            <div class="description">Classic cheese pizza with fresh toppings.</div>
+            <div class="rating">⭐ 4.5</div>
+            <div class="price">₹249</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/burger.jpg">
+        <div class="card-content">
+            <div class="menu-name">Chicken Burger</div>
+            <div class="description">Juicy grilled chicken burger.</div>
+            <div class="rating">⭐ 4.4</div>
+            <div class="price">₹199</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/biryani.jpg">
+        <div class="card-content">
+            <div class="menu-name">Chicken Biryani</div>
+            <div class="description">Hyderabadi dum biryani with raita.</div>
+            <div class="rating">⭐ 4.8</div>
+            <div class="price">₹299</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/pasta.jpg">
+        <div class="card-content">
+            <div class="menu-name">White Sauce Pasta</div>
+            <div class="description">Creamy pasta with herbs and cheese.</div>
+            <div class="rating">⭐ 4.3</div>
+            <div class="price">₹229</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/noodles.jpg">
+        <div class="card-content">
+            <div class="menu-name">Hakka Noodles</div>
+            <div class="description">Veg noodles tossed in Chinese sauces.</div>
+            <div class="rating">⭐ 4.2</div>
+            <div class="price">₹179</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/friedrice.jpg">
+        <div class="card-content">
+            <div class="menu-name">Chicken Fried Rice</div>
+            <div class="description">Flavored rice with chicken chunks.</div>
+            <div class="rating">⭐ 4.6</div>
+            <div class="price">₹219</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/dosa.jpg">
+        <div class="card-content">
+            <div class="menu-name">Masala Dosa</div>
+            <div class="description">Crispy dosa stuffed with potato masala.</div>
+            <div class="rating">⭐ 4.7</div>
+            <div class="price">₹129</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/paneertikka.jpg">
+        <div class="card-content">
+            <div class="menu-name">Paneer Tikka</div>
+            <div class="description">Spicy grilled paneer cubes.</div>
+            <div class="rating">⭐ 4.5</div>
+            <div class="price">₹249</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/cake.jpg">
+        <div class="card-content">
+            <div class="menu-name">Chocolate Cake</div>
+            <div class="description">Rich chocolate layered cake.</div>
+            <div class="rating">⭐ 4.9</div>
+            <div class="price">₹149</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="menu-card">
+        <img src="images/icecream.jpg">
+        <div class="card-content">
+            <div class="menu-name">Vanilla Ice Cream</div>
+            <div class="description">Creamy vanilla ice cream scoop.</div>
+            <div class="rating">⭐ 4.4</div>
+            <div class="price">₹99</div>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
