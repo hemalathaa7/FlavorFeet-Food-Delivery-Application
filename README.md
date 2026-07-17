@@ -76,20 +76,20 @@ FlavorFeet addresses these challenges by providing a full-stack online food deli
 
 This project is developed using the **Model-View-Controller (MVC)** architecture pattern.
 
- Model
+## Model
 
 * JavaBeans (User, Restaurant, Menu, Cart, Order, Favorite)
 * DAO (Data Access Object) classes
 * MySQL Database
 
- View
+## View
 
 * JSP
 * HTML
 * CSS
 * JavaScript
 
- Controller
+## Controller
 
 * Java Servlets
 * Handles client requests, business logic, and navigation between the View and Model.
@@ -106,7 +106,7 @@ This project is developed using the **Model-View-Controller (MVC)** architecture
 
 ## 📂 Project Structure
 
-
+```text
 Food_delivery_application/
 │
 ├── src/
@@ -131,10 +131,11 @@ Food_delivery_application/
 ├── build/
 ├── README.md
 └── pom.xml (if Maven)
-
+```
 
 ## Request Flow
 
+```text
 User
    │
    ▼
@@ -157,6 +158,7 @@ Servlet
    │
    ▲
 JSP (Response)
+```
 
 ## 🚀 Installation & Setup
 
