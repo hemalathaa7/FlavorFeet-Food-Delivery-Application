@@ -207,12 +207,12 @@ JSP (Response)
 
 ## 🔮 Future Enhancements
 
-💳 Online Payment Gateway
-📍 Live Order Tracking
-🔔 Email Notifications
-⭐ Ratings & Reviews
-🎟️ Coupons & Discounts
-📱 Mobile Application
+-💳 Online Payment Gateway
+-📍 Live Order Tracking
+-🔔 Email Notifications
+-⭐ Ratings & Reviews
+-🎟️ Coupons & Discounts
+-📱 Mobile Application
 
 ## 👩‍💻 Developer
 
