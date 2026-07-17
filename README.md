@@ -170,6 +170,38 @@ JSP (Response)
 6. Deploy on Apache Tomcat 10
 7. Access the application in your browser
 
+
+## 📸 Project Screenshots
+
+### 🏠 Landing Page
+![Landing Page](screenshots/index.png)
+
+### 🔐 Login Page
+![Login](screenshots/login.png)
+
+### 📝 Register Page
+![Register](screenshots/register.png)
+
+### 🏡 Home Page
+![Home](screenshots/home.png)
+
+### 🍽️ Restaurants
+![Restaurants](screenshots/resturants.png)
+
+### 📋 Menu Page
+![Menu](screenshots/menu.png)
+
+### ❤️ Favorites
+![Favorites](screenshots/favorites.png)
+
+### 🛒 Cart Page
+![Cart](screenshots/cart.png)
+
+### 💳 Checkout Page
+![Checkout](screenshots/checkout.png)
+
+
+
 ## 🔮 Future Enhancements
 
 💳 Online Payment Gateway
